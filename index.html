@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo Minado</title>
+    <!-- Google Fonts para um visual moderno -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>Campo Minado</h1>
+            <div class="controls">
+                <select id="difficulty-select">
+                    <option value="easy">Fácil (9x9, 10 minas)</option>
+                    <option value="medium">Médio (16x16, 40 minas)</option>
+                    <option value="hard">Difícil (30x16, 99 minas)</option>
+                </select>
+                <button id="reset-btn" class="glass-btn">Reiniciar Jogo</button>
+            </div>
+            
+            <div class="stats-bar">
+                <div class="stat-box">
+                    <span class="icon">🚩</span>
+                    <span id="mines-count">10</span>
+                </div>
+                <div class="stat-box">
+                    <span class="icon">⏱️</span>
+                    <span id="timer">000</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="board-container">
+            <div id="game-board"></div>
+        </main>
+    </div>
+
+    <!-- Modal de Fim de Jogo -->
+    <div id="game-over-modal" class="modal hidden">
+        <div class="modal-content glass-panel">
+            <h2 id="modal-title">Fim de Jogo</h2>
+            <p id="modal-message">Você pisou em uma mina!</p>
+            <button id="modal-btn" class="glass-btn primary">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+Clicking...Pressing key...Stopping...
+
+Stop Agent
